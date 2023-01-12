@@ -1,0 +1,379 @@
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        color: #121212;
+    }
+    body{
+        font-family: "Neue Montreal", Helvetica, sans-serif;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 2.5em;
+    }
+    nav .logo{
+        margin-top: 1em;
+    }
+    ul{
+        display: flex;
+    }
+    ul li{
+        list-style-type: none;
+        font-size: 15px;
+        padding: 1em;
+        user-select: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #121212;
+        font-weight: 400;
+    }
+    ul li:hover{
+        transform: translateY(-4px);
+    }
+    a {
+        color: inherit; /* blue colors for links too */
+        text-decoration: inherit; /* no underline */
+    }
+    h1{
+        font-family: "Fuji", "Helvetica", sans-serif;
+        margin-bottom: 1em;
+    }
+    h3{
+        font-family: "Fuji", "Helvetica", sans-serif;
+        text-transform: uppercase;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    h4{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-row-gap: 2em;
+        margin-bottom: 4em;
+    }
+    .product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        user-select: none;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+    .product h3{
+        max-width: 90%;
+        text-align: center;
+    }
+    .product img{
+        width: 90%;
+    }
+    .product:hover img{
+        opacity: 0.8;
+    }
+    .content-table{
+        border-collapse: collapse;
+        margin-top: 15px;
+        font-size: 15px;
+        width: 500px;
+        margin-bottom: 4em;
+    }
+    .content-table thead tr{
+        color: #fc6e5e;
+        text-align: left;
+        font-weight: bold;
+    }
+    .content-table thead tr th{
+        border: 1px solid #ececec;
+    }
+    .content-table th,
+    .content-table td{
+        padding: 12px 15px;
+    }
+    .content-table tbody tr{
+        border: 1px solid #ececec;
+        transition: 0.3s linear;
+    }
+    .table-container{
+        display: flex;
+        gap: 2.5em;
+    }
+    footer{
+        text-align: center;
+        margin-top: 100px;
+        padding: 10px;
+    }
+    @media (max-width: 1024px){
+        .product-container{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .table-container{
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        .content-table{
+            width: 100%;
+        }
+    }
+    @media (max-width: 768px){
+        .product-container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haute Stuff Original</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="https://cdn.shopify.com/s/files/1/1646/5611/files/FOR_SHOPIFY_LOGO_120x.png?v=1614345836" alt="HSO Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">About Us</a></li>
+            <li>Products</li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>OUR CLOTHES TAILOR TOWARDS OVERSIZE</h1>
+        <div class="table-container">
+            <div class="table-group">
+                <table class="content-table">
+                    <h3>SHIRTS SIZING (*inches)</h3>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Width</th>
+                        <th>Length</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>XXS</td>
+                        <td>16.5 - 17.5</td>
+                        <td>24 - 25</td>
+                    </tr>
+                    <tr>
+                        <td>XS</td>
+                        <td>17.5 - 18.5</td>
+                        <td>25 - 26</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>18.5 - 19.5</td>
+                        <td>26 - 27</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>19.5 - 20.5</td>
+                        <td>27 - 28</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>20.5 - 21.5</td>
+                        <td>29 - 30</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>21.5 - 22.5</td>
+                        <td>29 - 30</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-group">
+                <table class="content-table">
+                    <h3>PANTS SIZING (*inches)</h3>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Waist</th>
+                        <th>Length</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>XXS</td>
+                        <td>25 - 27</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>XS</td>
+                        <td>27 - 29</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>29 - 30</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>30 - 31</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>31 - 32</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>32 - 33</td>
+                        <td>34</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <h1>HOLIDAY COLLECTION</h1>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC09985_360x.jpg?v=1670815333" alt="">
+                <h3>Leather jacket v2</h3>
+                <h4>₱1,800</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC09939_360x.jpg?v=1670815668" alt="">
+                <h3>Leather shorts</h3>
+                <h4>₱1,600</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC00400_360x.jpg?v=1670817031" alt="">
+                <h3>Whats on your mind jeans</h3>
+                <h4>₱1,600</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC00442_360x.jpg?v=1670817080" alt="">
+                <h3>Private property jeans</h3>
+                <h4>₱1,600</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC09904_360x.jpg?v=1670816435" alt="">
+                <h3>Washed jeans</h3>
+                <h4>₱1,400</h4>
+            </div>
+        </div>
+
+        <h1>VINTAGE TEES</h1>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC00067_360x.jpg?v=1670321556" alt="">
+                <h3>Vintage graphic tee - batman</h3>
+                <h4>₱1,100</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC00034_360x.jpg?v=1670321723" alt="">
+                <h3>Vintage graphic tee - tyler</h3>
+                <h4>₱1,100</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC00172_360x.jpg?v=1670321523" alt="">
+                <h3>Vintage graphic tee - travis</h3>
+                <h4>₱1,100</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC00145_360x.jpg?v=1670321449" alt="">
+                <h3>Vintage graphic tee - tyson</h3>
+                <h4>₱1,100</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC00090_360x.jpg?v=1670321658" alt="">
+                <h3>Vintage graphic tee - dove</h3>
+                <h4>₱1,100</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC00051_360x.jpg?v=1670321685" alt="">
+                <h3>Vintage graphic tee - ring of fire</h3>
+                <h4>₱1,100</h4>
+            </div>
+        </div>
+
+        <h1>PANTS</h1>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/ASHOTS-05610_360x.jpg?v=1659882400" alt="">
+                <h3>Baggy jeans in light washed</h3>
+                <h4>₱1,800</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/ASHOTS-05481_360x.jpg?v=1659882044" alt="">
+                <h3>Baggy jeans in vintage grey</h3>
+                <h4>₱1,800</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/ASHOTS-05561_360x.jpg?v=1659882266" alt="">
+                <h3>Baggy jeans in vintage brown</h3>
+                <h4>₱1,800</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/ASHOTS-009632_360x.jpg?v=1631701759" alt="">
+                <h3>Classic cargo pants in taupe</h3>
+                <h4>₱1,450</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC06965_360x.jpg?v=1627292047" alt="">
+                <h3>Classic cargo pants in jet black</h3>
+                <h4>₱1,450</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/ASHOTS-017562_360x.jpg?v=1632132082" alt="">
+                <h3>Cargo pants with zip in stone</h3>
+                <h4>₱1,400</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/ASHOTS-019302_360x.jpg?v=1632132125" alt="">
+                <h3>Cargo pants with zip in dark gray</h3>
+                <h4>₱1,400</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/ASHOTS-019052_360x.jpg?v=1632132034" alt="">
+                <h3>Cargo pants with zip in black</h3>
+                <h4>₱1,400</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/ASHOTS-017033_360x.jpg?v=1632137910" alt="">
+                <h3>Cargo pants with zip in light khaki</h3>
+                <h4>₱1,400</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/ASHOTS-018173_360x.jpg?v=1632137973" alt="">
+                <h3>Cargo pants with zip in olive</h3>
+                <h4>₱1,400</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC07387_360x.jpg?v=1627296159" alt="">
+                <h3>10 pockets cargo pants in light khaki</h3>
+                <h4>₱1,800</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/1646/5611/products/DSC07318_360x.jpg?v=1627296253" alt="">
+                <h3>10 pockets cargo pants in jet black</h3>
+                <h4>₱1,800</h4>
+            </div>
+        </div>
+    </div>
+
+    <footer>Copyright © 2023, Haute Stuff Original.</footer>
+</body>
+</html>

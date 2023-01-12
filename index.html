@@ -1,0 +1,141 @@
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        color: #121212;
+    }
+    body{
+        font-family: "Neue Montreal", Helvetica, sans-serif;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 2.5em;
+    }
+    nav .logo{
+        margin-top: 1em;
+    }
+    ul{
+        display: flex;
+    }
+    ul li{
+        list-style-type: none;
+        font-size: 15px;
+        padding: 1em;
+        user-select: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #121212;
+        font-weight: 400;
+    }
+    ul li:hover{
+        transform: translateY(-4px);
+    }
+    a {
+        color: inherit; /* blue colors for links too */
+        text-decoration: inherit; /* no underline */
+    }
+    .about{
+        margin-top: 10em;
+
+        min-width: 400px;
+        max-width: 800px;
+    }
+    .about h1{
+        font-family: "Fuji", "Helvetica", sans-serif;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+    }
+    .about h3{
+        font-weight: 400;
+        max-width: 600px;
+        margin-bottom: 1.5em;
+    }
+    .about button{
+        font-family: "Neue Montreal", Helvetica, sans-serif;
+        font-weight: 400;
+        padding: 0.5em;
+        background-color: #121212;
+        color: #ececec;
+        user-select: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .about button:hover{
+        transform: scale(1.2);
+    }
+    footer{
+        text-align: center;
+        margin-top: 260px;
+        padding: 10px;
+    }
+    #google-iframe{
+        width: 700px;
+    }
+
+    @media (max-width: 1024px){
+        #google-iframe{
+            width: 520px;
+        }
+    }
+    @media (max-width: 768px){
+        #google-iframe{
+            width: 440px;
+        }
+    }
+    .about.second{
+        margin-top: 20em;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haute Stuff Original</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="https://cdn.shopify.com/s/files/1/1646/5611/files/FOR_SHOPIFY_LOGO_120x.png?v=1614345836" alt="HSO Logo">
+        </div>
+        <ul>
+            <li>About Us</li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="about">
+        <h1>
+            Haute Stuff Original is a street wear clothing brand established in 2021
+        </h1>
+        <h3>
+            What you wear is how you present yourself to the world, especially today,
+            when human contacts are so quick. Fashion is instant language.
+        </h3>
+        <button><a href="products.html">Browse</a></button>
+    </div>
+
+    <div class="about second">
+        <h1>
+            We are currently located in the Philippines, Metro Manila
+        </h1>
+        <h3>
+            At the present time we still do not have a physical store you can visit. Clothes can be bought online by using our website.
+        </h3>
+        <iframe id="google-iframe" src="https://www.google.com/maps/d/embed?mid=1_kwtGH3-Lua0QPKIJiy2Qw4a2cI&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe>
+    </div>
+
+    <footer>Copyright © 2023, Haute Stuff Original.</footer>
+</body>
+</html>

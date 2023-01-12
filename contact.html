@@ -1,0 +1,187 @@
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        color: #121212;
+    }
+    body{
+        font-family: "Neue Montreal", Helvetica, sans-serif;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 2.5em;
+    }
+    nav .logo{
+        margin-top: 1em;
+    }
+    ul{
+        display: flex;
+    }
+    ul li{
+        list-style-type: none;
+        font-size: 15px;
+        padding: 1em;
+        user-select: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #121212;
+        font-weight: 400;
+    }
+    ul li:hover{
+        transform: translateY(-4px);
+    }
+    h1{
+        font-family: "Fuji", "Helvetica", sans-serif;
+        margin-bottom: 1em;
+        text-transform: uppercase
+    }
+    h3{
+        font-family: "Fuji", "Helvetica", sans-serif;
+        text-transform: uppercase;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    h4{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    a {
+        color: inherit; /* blue colors for links too */
+        text-decoration: inherit; /* no underline */
+    }
+    footer{
+        text-align: center;
+        margin-top: 210px;
+        padding: 10px;
+    }
+
+    fieldset{
+        width: 200px;
+        padding: 10px;
+        border: 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"]
+    {
+        padding: 10px;
+        width: 200px;
+        height: 30px;
+    }
+    #message-box{
+        padding: 10px;
+        resize: none;
+        width: 420px;
+    }
+    .group{
+        display: flex;
+        max-width: 450px;
+        margin-bottom: 0.5em;
+    }
+    .box{
+        display: flex;
+        gap: 3em;
+    }
+    button{
+        font-family: "Neue Montreal", Helvetica, sans-serif;
+        font-weight: 400;
+        padding: 0.5em;
+        background-color: #121212;
+        color: #ececec;
+        user-select: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    button:hover{
+        transform: scale(1.2);
+    }
+    @media (max-width: 1024px){
+        .box{
+            flex-direction: column;
+        }
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haute Stuff Original</title>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="https://cdn.shopify.com/s/files/1/1646/5611/files/FOR_SHOPIFY_LOGO_120x.png?v=1614345836" alt="HSO Logo">
+    </div>
+    <ul>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li>Contact Us</li>
+    </ul>
+</nav>
+
+<div class="box">
+    <div class="container">
+        <h1>Contact us</h1>
+        <h3>Customer support</h3>
+        <form action="">
+            <div class="group">
+                <fieldset>
+                    <legend>Given Name:</legend>
+                    <input type="text">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Email:</legend>
+                    <input type="email">
+                </fieldset>
+            </div>
+
+            <div class="groupTwo">
+                <fieldset>
+                    <legend>Message:</legend>
+                    <textarea name="message" id="message-box" cols="30" rows="10"></textarea>
+                </fieldset>
+
+                <button>Submit</button>
+                <button>Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>Subscription</h1>
+        <h3>Be the first to know about the latest drops!</h3>
+        <form action="">
+            <div class="group">
+                <fieldset>
+                    <legend>Phone Number:</legend>
+                    <input type="tel">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Email:</legend>
+                    <input type="email">
+                </fieldset>
+            </div>
+
+            <button>Subscribe</button>
+        </form>
+    </div>
+</div>
+
+
+
+<footer>Copyright © 2023, Haute Stuff Original.</footer>
+</body>
+</html>
